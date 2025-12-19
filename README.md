@@ -4,17 +4,17 @@ REST API built with Node.js and Express, focused on authentication, authorizatio
 
 ---
 
-## 📌 Overview
+## 🇬🇧 English
 
-This project is a backend API that simulates a real authentication system used in web and mobile applications.
+### 📌 Overview
+This project is a backend REST API that simulates a real-world authentication system used in web and mobile applications.
 It includes user login, JWT-based authentication and protected routes based on user roles.
 
-The goal of this project is to demonstrate backend architecture, security concepts and full stack integration readiness.
+The goal of this project is to demonstrate backend architecture, security concepts and readiness for full stack integration.
 
 ---
 
-## 🛠 Tech Stack
-
+### 🛠 Tech Stack
 - Node.js
 - Express
 - JSON Web Tokens (JWT)
@@ -24,8 +24,7 @@ The goal of this project is to demonstrate backend architecture, security concep
 
 ---
 
-## 🔐 Authentication Flow (How it works)
-
+### 🔐 Authentication Flow (How it works)
 1. A user sends credentials (email and password) to the backend.
 2. The backend validates the credentials.
 3. If valid, the backend generates a JWT token.
@@ -37,19 +36,32 @@ This flow is commonly used in real-world applications.
 
 ---
 
-## 📍 Endpoints
+### 📍 Endpoints
 
-### Auth
+#### Auth
 - **POST /api/auth/login**  
   Authenticates a user and returns a JWT token.
 
-### Admin (Protected)
+#### Admin (Protected)
 - **GET /api/admin/secret**  
   Accessible only by users with `admin` role.  
   Requires a valid Bearer token.
 
 ---
 
-## 👤 Demo User
+### 👤 Demo User
 
 Use the following credentials to test the API:
+
+- **Email:** admin@example.com  
+- **Password:** admin123  
+- **Role:** admin  
+
+---
+
+### 🧪 Example Request (Protected Route)
+
+```http
+GET /api/admin/secret
+Authorization: Bearer YOUR_JWT_TOKEN
+```
